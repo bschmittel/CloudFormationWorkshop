@@ -1,6 +1,6 @@
 {
-"AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "This is my third CloudFormation template.",
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This is my seventh CloudFormation template.",
 
     "Parameters" : {
         "KeyNameParameter": {
@@ -294,7 +294,7 @@
             "Export" : {
               "Name" : "MyService-AMI"
             }
-          },
+          }
     }
 
 }

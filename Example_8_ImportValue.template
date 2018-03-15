@@ -1,6 +1,6 @@
 {
-"AWSTemplateFormatVersion": "2010-09-09",
-    "Description": "Testing ImportValue",
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Eight CloudFormation Template Testing ImportValue",
 
     "Resources": {
 
