@@ -1,0 +1,34 @@
+{
+"AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "This is my first CloudFormation template.",
+
+    "Resources": {
+
+        "MyFirstInstance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "KeyName": "Example1_KeyPair",
+                "ImageId": "ami-f2d3638a",
+                "InstanceType": "t2.micro",
+                "SecurityGroups" : [ {"Ref" : "InstanceSecurityGroup"} ],
+                "Tags": [
+                    {
+                        "Key": "Name",
+                        "Value": "My Instance"
+                    }
+                ]
+               
+                }
+            },
+
+            "InstanceSecurityGroup" : {
+                "Type" : "AWS::EC2::SecurityGroup",
+                "Properties" : {
+                  "GroupDescription" : "Enable SSH access from a specific IP",
+                  "SecurityGroupIngress" : [
+                    {"IpProtocol" : "tcp", "FromPort" : "22", "ToPort" : "22", "CidrIp" : "10.0.0.5/32"}
+                  ]
+                }
+            }
+    }
+}
